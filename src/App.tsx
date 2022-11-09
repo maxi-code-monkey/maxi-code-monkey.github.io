@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
 
-function App() {
+import "./App.css";
+import { withScopedCss } from './hoc/withScopedCss';
+import AppContext from "./context/AppContext";
+
+import ErrorBoundary from "./components/ErrorBoundary";
+import CustomAppBar from "./components/AppBar";
+import Spinner from "./components/Spinner";
+import ScrollToTop from "./components/ScrollToTop"
+
+import Main from "./modules/Main";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext>
+      <ErrorBoundary>
+        <Suspense fallback={<Spinner />}>
+          <CustomAppBar />
+          <Main />
+          <ScrollToTop />
+        </Suspense>
+      </ErrorBoundary>
+    </AppContext>
   );
-}
+};
 
-export default App;
+export default withScopedCss(App);
