@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.3164a195.css",
-    "main.js": "/static/js/main.d23873fd.js",
-    "static/js/787.fb771931.chunk.js": "/static/js/787.fb771931.chunk.js",
-    "static/media/outlook-40.svg": "/static/media/outlook-40.6286f2d7baa92d7161762cb9097288c4.svg",
-    "static/media/linkedin-40.svg": "/static/media/linkedin-40.9827903b1a81a951cd9a4bfa82249c54.svg",
-    "static/media/gmail-40.svg": "/static/media/gmail-40.3c0ddd7f58693582a31b676bd14b5791.svg",
-    "static/media/github-40.svg": "/static/media/github-40.252fc4882d85a55d4f00fd011b7124e5.svg",
-    "index.html": "/index.html",
-    "main.3164a195.css.map": "/static/css/main.3164a195.css.map",
-    "main.d23873fd.js.map": "/static/js/main.d23873fd.js.map",
-    "787.fb771931.chunk.js.map": "/static/js/787.fb771931.chunk.js.map"
+    "main.css": "/maxi-code-monkey.github.io/static/css/main.3164a195.css",
+    "main.js": "/maxi-code-monkey.github.io/static/js/main.584249c3.js",
+    "static/js/787.fb771931.chunk.js": "/maxi-code-monkey.github.io/static/js/787.fb771931.chunk.js",
+    "static/media/outlook-40.svg": "/maxi-code-monkey.github.io/static/media/outlook-40.6286f2d7baa92d7161762cb9097288c4.svg",
+    "static/media/linkedin-40.svg": "/maxi-code-monkey.github.io/static/media/linkedin-40.9827903b1a81a951cd9a4bfa82249c54.svg",
+    "static/media/gmail-40.svg": "/maxi-code-monkey.github.io/static/media/gmail-40.3c0ddd7f58693582a31b676bd14b5791.svg",
+    "static/media/github-40.svg": "/maxi-code-monkey.github.io/static/media/github-40.252fc4882d85a55d4f00fd011b7124e5.svg",
+    "index.html": "/maxi-code-monkey.github.io/index.html",
+    "main.3164a195.css.map": "/maxi-code-monkey.github.io/static/css/main.3164a195.css.map",
+    "main.584249c3.js.map": "/maxi-code-monkey.github.io/static/js/main.584249c3.js.map",
+    "787.fb771931.chunk.js.map": "/maxi-code-monkey.github.io/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3164a195.css",
-    "static/js/main.d23873fd.js"
+    "static/js/main.584249c3.js"
   ]
 }
