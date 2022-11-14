@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Divider, Drawer, IconButton, List, ListItem, AppBar, Container, Toolbar, Typography, Box, Button, Link, Avatar } from '@mui/material';
+import { Divider, Drawer, IconButton, List, ListItem, AppBar, Typography, Box, Link, Toolbar } from '@mui/material';
 import { styles } from "./styles";
 import BodyButton from '../BodyButton';
 import Pdf from '../../assets/pdf/Maximiliano_Gomez.pdf';
@@ -10,9 +10,7 @@ const drawerWidth = 240;
 export default function DrawerAppBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+  const handleDrawerToggle = useCallback(() => setMobileOpen(!mobileOpen), [mobileOpen]);
   
   const drawer = useMemo(() => (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: '#434', height: '100%' }}>
@@ -67,7 +65,7 @@ export default function DrawerAppBar() {
         <Divider />
       </List>
     </Box>
-  ), [])
+  ), [handleDrawerToggle]);
 
   const container = window !== undefined ? () => window.document.body : undefined;
 

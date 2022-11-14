@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useScrollTrigger, Fade, Box, Fab } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { styles } from './styles';
