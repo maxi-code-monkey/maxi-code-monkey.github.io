@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Typography, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import { Box, Typography } from '@mui/material';
 import CustomList from '../../List';
 
 import InlineTypography from '../../InlineTypography';

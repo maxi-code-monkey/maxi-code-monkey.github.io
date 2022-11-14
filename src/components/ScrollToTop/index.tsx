@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useScrollTrigger, Fade, Box, Fab } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { styles } from './styles';
 
 const ScrollToTop = () => {
+
   const trigger = useScrollTrigger({
     disableHysteresis: false,
     threshold: 500,
@@ -21,10 +23,10 @@ const ScrollToTop = () => {
       <Box
         onClick={handleClick}
         role="presentation"
-        sx={{ position: 'fixed', bottom: '16px', right: '50%' }}
+        sx={styles.container}
       >
-        <Fab size="large" aria-label="scroll to top">
-          <KeyboardArrowUpIcon />
+        <Fab sx={styles.fab} size="large" aria-label="scroll to top">
+          <KeyboardArrowUpIcon sx={styles.icon} />
         </Fab>
       </Box>
     </Fade>

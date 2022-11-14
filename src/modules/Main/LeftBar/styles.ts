@@ -21,6 +21,9 @@ export const styles: Record<Key, SxProps<Theme>> = {
     margin: '22px 0',
     'a svg': {
       fill: theme.palette.text.secondary,
+      '&:hover': {
+        fill: theme.palette.text.disabled,
+      }
     },
   }),
 };

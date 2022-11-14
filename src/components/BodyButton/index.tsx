@@ -1,6 +1,9 @@
 import React from 'react';
 import { Typography, Button, Link } from '@mui/material'
 import { Variant } from '@mui/material/styles/createTypography';
+import { styles } from './styles';
+
+export type ButtonVariant = 'BIG' | 'SMALL';
 
 interface Props {
   text: string;
@@ -8,6 +11,7 @@ interface Props {
   buttonVariant?: 'outlined' | 'contained';
   isALink?: boolean;
   linkHref?: string;
+  variant?: ButtonVariant;
 };
 
 const BodyButton = ({
@@ -15,21 +19,24 @@ const BodyButton = ({
   typographyVariant = "body1",
   buttonVariant = "outlined",
   isALink = false,
-  linkHref
-}: Props) => isALink && linkHref && linkHref?.length > 0 ? (
-  <Link href={linkHref} underline="none">
-    <Button sx={{ textTransform: 'none', padding: '20px', marginRight: '25px', marginBottom: '25px' }} variant={buttonVariant} color="secondary">
+  linkHref,
+  variant = "BIG",
+}: Props) => {
+  return isALink && linkHref && linkHref?.length > 0 ? (
+    <Link href={linkHref} target="_blank" rel="noopener noreferrer" underline="none">
+      <Button sx={styles.button[variant]} variant={buttonVariant} color="secondary">
+        <Typography variant={typographyVariant}>
+          {text}
+        </Typography>
+      </Button> 
+    </Link>
+  ) : (
+    <Button sx={styles.button[variant]} variant={buttonVariant} color="secondary">
       <Typography variant={typographyVariant}>
         {text}
       </Typography>
-    </Button> 
-  </Link>
-) : (
-  <Button sx={{ textTransform: 'none', padding: '20px', marginRight: '25px', marginBottom: '25px' }} variant={buttonVariant} color="secondary">
-    <Typography variant={typographyVariant}>
-      {text}
-    </Typography>
-  </Button>
-);
+    </Button>
+  );
+}
 
 export default BodyButton;

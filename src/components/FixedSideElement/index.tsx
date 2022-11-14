@@ -13,7 +13,7 @@ const FixedSideElement = ({
 }: Props ) => {
   const containerStyles = side === 'left' ? styles.left : styles.right;
   return (
-    <Box display={{ xs: 'none', md: 'block' }} sx={containerStyles}>
+    <Box display={{ xs: 'none', lg: 'block' }} sx={containerStyles}>
       {children}
     </Box>    
   );

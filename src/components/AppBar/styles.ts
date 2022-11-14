@@ -1,8 +1,20 @@
 import { SxProps, Theme } from '@mui/material';
 
-type Key = 'link' | 'menuOption' | 'toolbar' | 'resume' | 'avatar' | 'appBar';
+type Key = 'container' | 'appBar' | 'headerContainer' | 'link' | 'menuOption' | 'resume' | 'avatar' | 'listItem' ;
 
 export const styles: Record<Key, SxProps<Theme>> = {
+  container: {
+    display: 'flex',
+  },
+  appBar: (theme: Theme) => ({
+    backgroundColor: theme.palette.background.default,
+  }),
+  headerContainer: {
+    display: { xs: 'none', sm: 'flex' },
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: { sm: '90%', md: '100%' },
+  },
   menuOption: {
     padding: '0',
     ':first-child': {
@@ -14,11 +26,6 @@ export const styles: Record<Key, SxProps<Theme>> = {
     flexDirection: 'row',
     padding: '0 20px',
   },
-  toolbar: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
   resume: {
     marginLeft: '40px',
     textTransform: 'none',
@@ -27,8 +34,7 @@ export const styles: Record<Key, SxProps<Theme>> = {
     backgroundColor: theme.palette.secondary.main,
     marginRight: '20px',
   }),
-  appBar: (theme: Theme) => ({
-    backgroundColor: theme.palette.background.default,
-    color: theme.palette.text.primary,
-  })
+  listItem: {
+    padding: '10px 8px'
+  },
 };

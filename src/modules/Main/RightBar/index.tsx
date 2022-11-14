@@ -11,7 +11,7 @@ const RightBar = () => {
       side="right"
     >
       <Typography sx={styles.text} variant="body1">
-        <Link sx={styles.link} href="mailto:maxi.gomez.tumini@live.com" underline="none">
+        <Link target="_blank" sx={styles.link} href="mailto:maxi.gomez.tumini@live.com" underline="none">
           maxi.gomez.tumini@live.com
         </Link>
       </Typography>

@@ -17,22 +17,22 @@ const LeftBar = () => {
     >
       <List sx={styles.listContainer}>
         <ListItem sx={styles.listItem}>
-          <Link href="https://www.github.com/maxi-code-monkey/" underline="none">
+          <Link target="_blank" href="https://www.github.com/maxi-code-monkey/" underline="none">
             <GitHubIcon />
           </Link>
         </ListItem>
         <ListItem sx={styles.listItem}>
-          <Link href="https://www.linkedin.com/in/maximiliano-gomez-49ba1ab2/" underline="none">
+          <Link target="_blank" href="https://www.linkedin.com/in/maximiliano-gomez-49ba1ab2/" underline="none">
             <LinkedinIcon />
           </Link>
         </ListItem>
         <ListItem sx={styles.listItem}>
-          <Link href="mailto:maxi.gomez.tumini@live.com" underline="none">
+          <Link target="_blank" href="mailto:maxi.gomez.tumini@live.com" underline="none">
             <OutlookIcon/>
           </Link>
         </ListItem>
         <ListItem sx={styles.listItem}>
-          <Link href="mailto:maxi.gomez.tumini@gmail.com" underline="none">
+          <Link target="_blank" href="mailto:maxi.gomez.tumini@gmail.com" underline="none">
             <GmailIcon />
           </Link>
         </ListItem>

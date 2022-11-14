@@ -19,5 +19,8 @@ export const styles: Record<Key, SxProps<Theme>> = {
     letterSpacing: '0.1em',
     writingMode: 'vertical-rl',
     color: theme.palette.text.secondary,
+    '&:hover': {
+      color: theme.palette.text.disabled,
+    }
   })
 };

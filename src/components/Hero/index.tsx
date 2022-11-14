@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
 import BodyButton from '../BodyButton';
 import { styles } from './styles';
+import Pdf from '../../assets/pdf/Maximiliano_Gomez.pdf';
 
 const Hero = () => {
   return (
@@ -22,7 +23,7 @@ const Hero = () => {
         </Typography>
         <Box display="flex" flexDirection={{ xs: 'column', sm: 'row' }}>
           <BodyButton text="Schedule a meeting with me" isALink linkHref="https://calendly.com/maxi-gomez-tumini/30min" />
-          <BodyButton text="Download my resume!" />
+          <BodyButton text="Download my resume!" isALink linkHref={Pdf} />
         </Box>
       </Container>
     </Box>

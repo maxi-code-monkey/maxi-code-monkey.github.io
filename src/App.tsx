@@ -5,7 +5,7 @@ import { withScopedCss } from './hoc/withScopedCss';
 import AppContext from "./context/AppContext";
 
 import ErrorBoundary from "./components/ErrorBoundary";
-import CustomAppBar from "./components/AppBar";
+import DrawerAppBar from "./components/AppBar";
 import Spinner from "./components/Spinner";
 import ScrollToTop from "./components/ScrollToTop"
 
@@ -16,7 +16,7 @@ const App = () => {
     <AppContext>
       <ErrorBoundary>
         <Suspense fallback={<Spinner />}>
-          <CustomAppBar />
+          <DrawerAppBar />
           <Main />
           <ScrollToTop />
         </Suspense>
