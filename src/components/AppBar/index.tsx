@@ -3,6 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Divider, Drawer, IconButton, List, ListItem, AppBar, Container, Toolbar, Typography, Box, Button, Link, Avatar } from '@mui/material';
 import { styles } from "./styles";
 import BodyButton from '../BodyButton';
+import Pdf from '../../assets/pdf/Maximiliano_Gomez.pdf';
 
 const drawerWidth = 240;
 
@@ -118,7 +119,7 @@ export default function DrawerAppBar() {
                 </Typography>
               </Link>
             </Box>
-            <BodyButton variant="SMALL" text="Resume" isALink linkHref="https://calendly.com/maxi-gomez-tumini/30min" />
+            <BodyButton variant="SMALL" text="Resume" isALink linkHref={Pdf} />
           </Box>
         </Toolbar>
       </AppBar>
