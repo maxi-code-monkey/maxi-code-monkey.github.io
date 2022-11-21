@@ -1,6 +1,6 @@
 import { SxProps, Theme } from '@mui/material';
 
-type Key = 'sectionContainer' | 'message' | 'textContainer';
+type Key = 'sectionContainer' | 'message' | 'textContainer' | 'avatarContainer' | 'avatar';
 
 export const styles: Record<Key, SxProps<Theme>> = {
   sectionContainer: (theme: Theme) => ({
@@ -26,4 +26,14 @@ export const styles: Record<Key, SxProps<Theme>> = {
     display: 'flex',
     flexDirection: { xs: 'column', md: 'row' }
   },
+  avatarContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  avatar: {
+    minWidth: { xs: '250px', md: '350px' },
+    minHeight: { xs: '250px', md: '350px' },
+    margin: '20px 80px 40px',
+  }
 };
