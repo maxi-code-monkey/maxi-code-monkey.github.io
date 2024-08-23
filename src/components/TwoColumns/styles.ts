@@ -5,10 +5,11 @@ type Key = 'twoColumnsContainer' | 'leftColumn' | 'rightColumn';
 export const styles: Record<Key, SxProps<Theme>> = {
   twoColumnsContainer: (theme: Theme) => ({
     backgroundColor: theme.palette.background.default,
-    height: '800px',
+    height: '100vh',
     display: 'flex',
     flexDirection: { xs: 'column', md: 'row' },
-    overflow: 'hidden'
+    overflow: 'hidden',
+    paddingBottom: '2rem',
   }),
   leftColumn: {
     width: { xs: '100%', md: '40%' },

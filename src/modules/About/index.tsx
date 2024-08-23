@@ -5,6 +5,7 @@ import SectionTitle from '../../components/SectionTitle';
 import InlineTypography from '../../components/InlineTypography';
 
 import { styles } from './styles';
+import Hero from '../../components/Hero';
 
 const About = () => {
   const yearsOfExperience = new Date().getFullYear() - 2011;
@@ -13,6 +14,7 @@ const About = () => {
   return (
     <Box sx={styles.sectionContainer} id="about">
       <SectionTitle number="01." name="About Me" />
+      <Hero />
       <Box className='text-container' sx={styles.textContainer}>
         <Typography sx={styles.message} variant="body1">
           I´ve been working on IT as a Software Engineer for {yearsOfExperience} years now. I started this journey as a Backend Developer with .NET

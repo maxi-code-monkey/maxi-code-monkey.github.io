@@ -10,10 +10,7 @@ const Hero = () => {
     <Box className='hero-wrapper' sx={styles.heroContainer}>
       <Container className='content-container' sx={styles.titleContainer}>
         <Typography sx={styles.greeting} variant="body1">
-          Hey, welcome to my personal portfolio! my name is
-        </Typography>
-        <Typography sx={styles.name} variant="h1">
-          Maxi Gomez.
+          Hey, welcome to my personal portfolio!
         </Typography>
         <Typography sx={styles.bio} variant="body1">
           I´m a passionate Senior Software Engineer who's been doing what he loves ever since 2011.

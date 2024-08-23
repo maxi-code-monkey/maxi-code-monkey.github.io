@@ -5,8 +5,7 @@ type Key = 'greeting' | 'heroContainer' | 'name' | 'titleContainer' | 'bio' | 'b
 export const styles: Record<Key, SxProps<Theme>> = {
   heroContainer: (theme: Theme) => ({
     backgroundColor: theme.palette.background.default,
-    minHeight: '100vh',
-    paddingBottom: '5rem'
+    paddingBottom: '2rem'
   }),
   titleContainer: {
     display: 'flex',
@@ -15,11 +14,11 @@ export const styles: Record<Key, SxProps<Theme>> = {
     alignItems: 'flex-start',
     maxWidth: '1000px',
     margin: '0 auto',
-    paddingBlockStart: { xs: '150px', md: '300px' }
+    paddingBlockStart: { xs: '50px' }
   },
   greeting: (theme: Theme) => ({
-    paddingLeft: '5px',
     color: theme.palette.text.disabled,
+    margin: { xs: '20px auto 20px 0', md: '20px auto 30px 0' },
   }),
   name: (theme: Theme) => ({
     margin: { xs: '20px auto 20px 0', md: '20px auto 30px 0' },
