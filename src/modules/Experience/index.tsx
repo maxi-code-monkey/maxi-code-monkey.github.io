@@ -1,18 +1,25 @@
 import React from 'react';
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 
 import SectionTitle from '../../components/SectionTitle';
-import CustomTabs from '../../components/Tab';
+import { WorkExperiences } from '../../constants/work-experiences';
+import { ExperienceCardProps } from '../../components/ExperienceCard/types';
+import ExperienceCard from '../../components/ExperienceCard';
 
 import { styles } from './styles';
 
-const About = () => (
-  <Box sx={styles.sectionContainer} id="experience">
-    <Container maxWidth="lg">
-      <SectionTitle number="03." name="Where I´ve Worked" />
-      <CustomTabs />
-    </Container>
-  </Box>
-);
+const WorkExperience = () => {
 
-export default About;
+  return (
+    <Box sx={styles.sectionContainer} id="work-experience">
+      <SectionTitle number="02." name="Work Experience" />
+      <Box className='text-container' sx={styles.experienceContainer}>
+        {WorkExperiences.map((experience: ExperienceCardProps, index: number) => (
+          <ExperienceCard {...experience} />
+        ))}
+      </Box>
+    </Box>
+  );
+}
+
+export default WorkExperience;

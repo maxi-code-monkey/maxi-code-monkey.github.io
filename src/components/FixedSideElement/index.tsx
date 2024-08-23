@@ -2,8 +2,13 @@ import React from 'react';
 import { Box } from '@mui/material';
 import { styles } from './styles';
 
+export enum EFixedElement {
+  LEFT = 'left',
+  RIGHT = 'right'
+};
+
 interface Props {
-  side: 'left' | 'right';
+  side: EFixedElement;
   children: React.ReactNode;
 };
 
