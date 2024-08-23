@@ -1,6 +1,6 @@
 import { SxProps, Theme } from '@mui/material';
 
-type Key = 'cardContainer' | 'leftColumn' | 'years' | 'position' | 'descParagraph' | 'pillsContainer' | 'rightColumn';
+type Key = 'cardContainer' | 'leftColumn' | 'years' | 'position' | 'descParagraph' | 'pillsContainer' | 'rightColumn' | 'cardContainerWithPointer';
 
 export const styles: Record<Key, SxProps<Theme>> = {
   cardContainer: (theme: Theme) => ({
@@ -8,6 +8,23 @@ export const styles: Record<Key, SxProps<Theme>> = {
     height: '100%',
     display: 'flex',
     flexDirection: { xs: 'column', sm: 'row' },
+    padding: '0.5rem',
+    '&:hover': {
+      border: `0.5px solid ${theme.palette.text.secondary}`,
+      borderRadius: '0.5rem',
+    }
+  }),
+  cardContainerWithPointer: (theme: Theme) => ({
+    backgroundColor: theme.palette.background.default,
+    height: '100%',
+    display: 'flex',
+    flexDirection: { xs: 'column', sm: 'row' },
+    padding: '0.5rem',
+    '&:hover': {
+      border: `0.5px solid ${theme.palette.text.secondary}`,
+      borderRadius: '0.5rem',
+      cursor: 'pointer',
+    }
   }),
   leftColumn: {
     width: { xs: '100%', sm: '30%' },
@@ -36,5 +53,4 @@ export const styles: Record<Key, SxProps<Theme>> = {
     flexDirection: 'column',
     gap: '1rem'
   }),
-
 };

@@ -4,6 +4,7 @@ export const WorkExperiences: Array<ExperienceCardProps> = [
   {
     position: "Senior Software Engineer",
     employer: "Arionkoder",
+    url: 'https://www.arionkoder.com/',
     fromYear: "Jan 2023",
     toYear: "Present",
     description: [
@@ -15,6 +16,7 @@ export const WorkExperiences: Array<ExperienceCardProps> = [
   {
     position: "Senior Software Engineer",
     employer: "DevBase",
+    url: 'https://www.devbase.us/',
     fromYear: "Jan 2023",
     toYear: "Aug 2024",
     description: [
@@ -26,6 +28,7 @@ export const WorkExperiences: Array<ExperienceCardProps> = [
   {
     position: "Senior Software Engineer",
     employer: "Equinox",
+    url: 'https://www.equinox.com/',
     fromYear: "Aug 2019",
     toYear: "Dec 2022",
     description: [
@@ -45,6 +48,7 @@ export const WorkExperiences: Array<ExperienceCardProps> = [
   {
     position: "Senior Software Engineer",
     employer: "Xside Solutions",
+    url: 'https://xsidesolutions.com/',
     fromYear: "Jan 2019",
     toYear: "Aug 2022",
     description: [

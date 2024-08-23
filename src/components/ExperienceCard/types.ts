@@ -5,4 +5,5 @@ export interface ExperienceCardProps {
   employer: string;
   description: Array<string>;
   stack: Array<string>;
+  url?: string;
 }

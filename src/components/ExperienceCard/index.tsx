@@ -3,9 +3,9 @@ import { Box, Typography } from "@mui/material";
 
 import { ExperienceCardProps } from "./types";
 import Pill from "../Pill";
+import InlineTypography from "../InlineTypography";
 
 import { styles } from './styles';
-import InlineTypography from "../InlineTypography";
 
 const ExperienceCard = ({
   description,
@@ -13,10 +13,13 @@ const ExperienceCard = ({
   fromYear,
   position,
   stack,
-  toYear
+  toYear,
+  url,
 }: ExperienceCardProps) => {
+  const handleCardClick = () => url && window.open(url, '_blank');
+
   return (
-    <Box className='experience-card' sx={styles.cardContainer}>
+    <Box onClick={handleCardClick} className='experience-card' sx={url ? styles.cardContainerWithPointer : styles.cardContainer}>
       <Box className='left-column' sx={styles.leftColumn}>
         <Typography sx={styles.years} variant="body1">
           {fromYear} - {toYear}

@@ -14,6 +14,8 @@ export const styles: Record<Key, SxProps<Theme>> = {
     paddingRight: '1.5rem'
   }),
   experienceContainer: {
-
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1rem',
   }
 };
