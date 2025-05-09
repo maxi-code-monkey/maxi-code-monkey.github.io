@@ -5,24 +5,24 @@ type Key = 'cardContainer' | 'leftColumn' | 'years' | 'position' | 'descParagrap
 export const styles: Record<Key, SxProps<Theme>> = {
   cardContainer: (theme: Theme) => ({
     backgroundColor: theme.palette.background.default,
+    borderRadius: '0.5rem',
     height: '100%',
     display: 'flex',
     flexDirection: { xs: 'column', sm: 'row' },
     padding: '0.5rem',
     '&:hover': {
       border: `0.5px solid ${theme.palette.text.secondary}`,
-      borderRadius: '0.5rem',
     }
   }),
   cardContainerWithPointer: (theme: Theme) => ({
     backgroundColor: theme.palette.background.default,
+    borderRadius: '0.5rem',
     height: '100%',
     display: 'flex',
     flexDirection: { xs: 'column', sm: 'row' },
     padding: '0.5rem',
     '&:hover': {
       border: `0.5px solid ${theme.palette.text.secondary}`,
-      borderRadius: '0.5rem',
       cursor: 'pointer',
     }
   }),

@@ -4,7 +4,6 @@ type Key = 'sectionContainer' | 'message' | 'textContainer';
 
 export const styles: Record<Key, SxProps<Theme>> = {
   sectionContainer: (theme: Theme) => ({
-    backgroundColor: theme.palette.background.default,
     textAlign: 'left',
     display: 'flex',
     flexDirection: 'column',

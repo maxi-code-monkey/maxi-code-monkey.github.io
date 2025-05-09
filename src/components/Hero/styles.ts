@@ -4,7 +4,6 @@ type Key = 'greeting' | 'heroContainer' | 'name' | 'titleContainer' | 'bio' | 'b
 
 export const styles: Record<Key, SxProps<Theme>> = {
   heroContainer: (theme: Theme) => ({
-    backgroundColor: theme.palette.background.default,
     paddingBottom: '2rem'
   }),
   titleContainer: {

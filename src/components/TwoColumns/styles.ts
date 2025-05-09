@@ -4,7 +4,8 @@ type Key = 'twoColumnsContainer' | 'leftColumn' | 'rightColumn';
 
 export const styles: Record<Key, SxProps<Theme>> = {
   twoColumnsContainer: (theme: Theme) => ({
-    backgroundColor: theme.palette.background.default,
+    backgroundImage: `url("https://img.freepik.com/premium-vector/blue-polygon-dark-background-square-social-template-vector_53876-170115.jpg?semt=ais_hybrid&w=740")`,
+    backgroundSize: 'cover',
     height: '100vh',
     display: 'flex',
     flexDirection: { xs: 'column', md: 'row' },
