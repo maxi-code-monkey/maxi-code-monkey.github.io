@@ -1,25 +1,21 @@
 import React from 'react';
-import { useScrollTrigger, Fade, Box, Fab } from '@mui/material';
+import { Fade, Box, Fab } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+
+import { ScrollToTopIncomingProps } from './types';
+
 import { styles } from './styles';
 
-const ScrollToTop = () => {
+const ScrollToTop = ({
+  isVisible,
+  selector,
+}: ScrollToTopIncomingProps) => {
 
-  const trigger = useScrollTrigger({
-    disableHysteresis: false,
-    threshold: 500,
-  });
-
-  const handleClick = () => (
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    })
-  );
+  const handleClick = () =>
+    document.querySelector(selector)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <Fade in={trigger}>
+    <Fade in={isVisible}>
       <Box
         onClick={handleClick}
         role="presentation"

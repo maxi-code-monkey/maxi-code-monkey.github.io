@@ -1,12 +1,16 @@
 import React from "react";
 import { Box } from "@mui/material";
 
-import MainInfo from "../../modules/MainInfo";
 import About from "../../modules/About";
+import Contact from "../../modules/Contact";
+import WorkExperience from "../../modules/Experience";
+import MainInfo from "../../modules/MainInfo";
+
+import { WithScrollToTop } from "../../hoc/withScrollToTop/withScrollToTop";
 
 import { styles } from './styles';
-import WorkExperience from "../../modules/Experience";
-import Contact from "../../modules/Contact";
+
+const scrollToTopSelector = 'about-container';
 
 const TwoColumns = () => {
   return (
@@ -14,10 +18,16 @@ const TwoColumns = () => {
       <Box className='left-column' sx={styles.leftColumn}>
         <MainInfo />
       </Box>
-      <Box className='right-column' sx={styles.rightColumn}>
-        <About />
-        <WorkExperience />
-        <Contact />
+      <Box className='right-column' sx={styles.rightColumn} component={'div'}>
+        <Box className={scrollToTopSelector}>
+          <About />
+        </Box>
+        <WithScrollToTop selector={`.${scrollToTopSelector}`}>
+          <>
+            <WorkExperience />
+            <Contact />
+          </>
+        </WithScrollToTop>
       </Box>
     </Box>
   )
