@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e62cc432.css",
-    "main.js": "/static/js/main.18f1aca7.js",
+    "main.js": "/static/js/main.0bb5f375.js",
     "static/js/453.298f5782.chunk.js": "/static/js/453.298f5782.chunk.js",
     "static/media/profile_pic.jpeg": "/static/media/profile_pic.b9bed693037461efb3b1.jpeg",
     "static/media/Maximiliano_Gomez.pdf": "/static/media/Maximiliano_Gomez.50e7fd602ed833d5f083.pdf",
@@ -11,11 +11,11 @@
     "static/media/github-40.svg": "/static/media/github-40.be0f090b330921608d31ff39425998f5.svg",
     "index.html": "/index.html",
     "main.e62cc432.css.map": "/static/css/main.e62cc432.css.map",
-    "main.18f1aca7.js.map": "/static/js/main.18f1aca7.js.map",
+    "main.0bb5f375.js.map": "/static/js/main.0bb5f375.js.map",
     "453.298f5782.chunk.js.map": "/static/js/453.298f5782.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e62cc432.css",
-    "static/js/main.18f1aca7.js"
+    "static/js/main.0bb5f375.js"
   ]
 }
