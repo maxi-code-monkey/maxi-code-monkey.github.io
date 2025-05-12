@@ -3,7 +3,7 @@ import { SxProps, Theme } from '@mui/material';
 type Key = 'sectionContainer' | 'name' | 'workTitle' | 'description' | 'avatarContainer' | 'avatar' | 'link' | 'linksContainer' | 'contentContainer';
 
 export const styles: Record<Key, SxProps<Theme>> = {
-  sectionContainer: (theme: Theme) => ({
+  sectionContainer: () => ({
     textAlign: 'left',
     display: 'flex',
     flexDirection: { xs: 'column', sm: 'row-reverse', md: 'column' },
@@ -11,11 +11,14 @@ export const styles: Record<Key, SxProps<Theme>> = {
     alignItems: 'center',
     height: '100%',
   }),
-  avatarContainer: {
+  avatarContainer: (theme: Theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-  },
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    }
+  }),
   avatar: {
     minWidth: '150px',
     minHeight: '150px',

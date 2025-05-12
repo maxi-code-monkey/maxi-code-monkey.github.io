@@ -3,8 +3,9 @@ import { SxProps, Theme } from '@mui/material';
 type Key = 'twoColumnsContainer' | 'leftColumn' | 'rightColumn'; 
 
 export const styles: Record<Key, SxProps<Theme>> = {
-  twoColumnsContainer: (theme: Theme) => ({
+  twoColumnsContainer: () => ({
     backgroundImage: `url("https://img.freepik.com/premium-vector/blue-polygon-dark-background-square-social-template-vector_53876-170115.jpg?semt=ais_hybrid&w=740")`,
+    // https://img.freepik.com/free-vector/futuristic-background-with-lines_23-2148487905.jpg?semt=ais_hybrid&w=740
     backgroundSize: 'cover',
     height: '100vh',
     display: 'flex',
@@ -12,13 +13,16 @@ export const styles: Record<Key, SxProps<Theme>> = {
     overflow: 'hidden',
     paddingBottom: '2rem',
   }),
-  leftColumn: {
-    width: { xs: '100%', md: '40%' },
+  leftColumn: (theme) => ({
+    width: { xs: '100%', md: '30%' },
     padding: '2rem 1.5rem',
-  },
-  rightColumn: (theme: Theme) => ({
-    width: { xs: '100%', md: '60%' },
-    padding: { xs: '2rem 1rem', md: '2rem 0' },
+    [theme.breakpoints.down('md')]: {
+      paddingBottom: '0'
+    }
+  }),
+  rightColumn: () => ({
+    width: { xs: '100%', md: '70%' },
+    padding: { xs: '2rem 1rem', md: '2rem 5rem', lg: '2rem 9rem' },
     height: '100%',
     overflow: 'auto',
   }),

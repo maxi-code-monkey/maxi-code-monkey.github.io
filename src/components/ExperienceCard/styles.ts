@@ -2,29 +2,29 @@ import { SxProps, Theme } from '@mui/material';
 
 type Key = 'cardContainer' | 'leftColumn' | 'years' | 'position' | 'descParagraph' | 'pillsContainer' | 'rightColumn' | 'cardContainerWithPointer';
 
+const defaultCardStyling: SxProps<Theme> = (theme: Theme) => ({
+  backgroundColor: theme.palette.background.default,
+  borderRadius: '0.5rem',
+  height: '100%',
+  display: 'flex',
+  flexDirection: { xs: 'column', sm: 'row' },
+  padding: '0.5rem',
+  transition: `${theme.transitions.create(['transform'], {
+    duration: theme.transitions.duration.standard,
+  })}`,
+  '&:hover': {
+    border: `0.5px solid ${theme.palette.text.secondary}`,
+    transform: 'scale(1.2)',
+  }
+});
+
 export const styles: Record<Key, SxProps<Theme>> = {
   cardContainer: (theme: Theme) => ({
-    backgroundColor: theme.palette.background.default,
-    borderRadius: '0.5rem',
-    height: '100%',
-    display: 'flex',
-    flexDirection: { xs: 'column', sm: 'row' },
-    padding: '0.5rem',
-    '&:hover': {
-      border: `0.5px solid ${theme.palette.text.secondary}`,
-    }
+    ...defaultCardStyling(theme),
   }),
   cardContainerWithPointer: (theme: Theme) => ({
-    backgroundColor: theme.palette.background.default,
-    borderRadius: '0.5rem',
-    height: '100%',
-    display: 'flex',
-    flexDirection: { xs: 'column', sm: 'row' },
-    padding: '0.5rem',
-    '&:hover': {
-      border: `0.5px solid ${theme.palette.text.secondary}`,
-      cursor: 'pointer',
-    }
+    ...defaultCardStyling(theme),
+    cursor: 'pointer',
   }),
   leftColumn: {
     width: { xs: '100%', sm: '30%' },
