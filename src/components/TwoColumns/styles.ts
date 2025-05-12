@@ -20,10 +20,15 @@ export const styles: Record<Key, SxProps<Theme>> = {
       paddingBottom: '0'
     }
   }),
-  rightColumn: () => ({
+  rightColumn: (theme: Theme) => ({
     width: { xs: '100%', md: '70%' },
     padding: { xs: '2rem 1rem', md: '2rem 5rem', lg: '2rem 9rem' },
     height: '100%',
     overflow: 'auto',
+    [theme.breakpoints.up('md')]: {
+      '.about-container': {
+        marginBottom: '4.5rem'
+      }
+    }
   }),
 };
