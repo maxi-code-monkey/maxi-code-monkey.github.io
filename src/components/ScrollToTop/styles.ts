@@ -12,6 +12,7 @@ export const styles: Record<Key, SxProps<Theme>> = {
     backgroundColor: theme.palette.background.default,
     '&:hover': {
       backgroundColor: theme.palette.background.default,
+      border: `0.5px solid ${theme.palette.text.disabled}`,
     }
   }),
   icon: (theme: Theme) => ({
