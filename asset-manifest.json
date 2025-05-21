@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.e62cc432.css",
-    "main.js": "/static/js/main.ea8e1dde.js",
+    "main.js": "/static/js/main.ed40d0b5.js",
     "static/js/453.298f5782.chunk.js": "/static/js/453.298f5782.chunk.js",
     "static/media/profile_pic.jpeg": "/static/media/profile_pic.b9bed693037461efb3b1.jpeg",
     "static/media/Maximiliano_Gomez.pdf": "/static/media/Maximiliano_Gomez.50e7fd602ed833d5f083.pdf",
+    "static/media/quotes-fermin-molinuevo.jpeg": "/static/media/quotes-fermin-molinuevo.b565850f463300cadf7c.jpeg",
     "static/media/outlook-40.svg": "/static/media/outlook-40.89a73d069175245aa25719b4390357af.svg",
     "static/media/linkedin-40.svg": "/static/media/linkedin-40.653446311f1d0288eabca0bce649140c.svg",
     "static/media/gmail-40.svg": "/static/media/gmail-40.64fa770f79ae9bfce944c7fc5b0e1906.svg",
     "static/media/github-40.svg": "/static/media/github-40.be0f090b330921608d31ff39425998f5.svg",
     "index.html": "/index.html",
     "main.e62cc432.css.map": "/static/css/main.e62cc432.css.map",
-    "main.ea8e1dde.js.map": "/static/js/main.ea8e1dde.js.map",
+    "main.ed40d0b5.js.map": "/static/js/main.ed40d0b5.js.map",
     "453.298f5782.chunk.js.map": "/static/js/453.298f5782.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e62cc432.css",
-    "static/js/main.ea8e1dde.js"
+    "static/js/main.ed40d0b5.js"
   ]
 }
