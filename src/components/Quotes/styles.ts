@@ -17,7 +17,7 @@ export const styles: Record<Key, SxProps<Theme>> = {
     justifyContent: 'center',
 
     '.left-column': {
-      padding: '0 3rem',
+      padding: { xs: 0, md: '0 3rem' },
       width: '60%',
       display: 'flex',
       flexDirection: 'column',
@@ -45,7 +45,7 @@ export const styles: Record<Key, SxProps<Theme>> = {
     },
     '.right-column': {
       width: '40%',
-      display: 'flex',
+      display: { xs: 'none', md: 'flex' },
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -89,7 +89,7 @@ export const styles: Record<Key, SxProps<Theme>> = {
     },
   }),
   avatar: () => ({
-    height: '50%',
-    width: '100%'
+    height: '250px',
+    width: '250px'
   }),
 };

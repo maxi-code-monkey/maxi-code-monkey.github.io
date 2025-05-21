@@ -25,8 +25,7 @@ const Quote = ({
         <Typography variant="body2" className="position">{position}</Typography>
       </Box>
       <Box className='right-column'>
-        <Avatar sx={styles.avatar} src={image}>
-        </Avatar>
+        <Avatar sx={styles.avatar} src={image} />
       </Box>
     </Box>
   );
