@@ -1,14 +1,14 @@
 import { SxProps, Theme } from '@mui/material';
 
-type Key = 'cardContainer' | 'leftColumn' | 'years' | 'position' | 'descParagraph' | 'pillsContainer' | 'rightColumn' | 'cardContainerWithPointer';
+type Key = 'cardContainer' | 'years' | 'position' | 'descParagraph' | 'pillsContainer' | 'rightColumn' | 'cardContainerWithPointer';
 
 const defaultCardStyling: SxProps<Theme> = (theme: Theme) => ({
   backgroundColor: theme.palette.background.default,
   borderRadius: '0.5rem',
   height: '100%',
   display: 'flex',
-  flexDirection: { xs: 'column', sm: 'row' },
-  padding: '0.5rem',
+  flexDirection: 'column',
+  padding: '1.5rem',
   transition: `${theme.transitions.create(['transform'], {
     duration: theme.transitions.duration.standard,
   })}`,
@@ -26,10 +26,6 @@ export const styles: Record<Key, SxProps<Theme>> = {
     ...defaultCardStyling(theme),
     cursor: 'pointer',
   }),
-  leftColumn: {
-    width: { xs: '100%', sm: '30%' },
-    padding: '2rem 0.5rem',
-  },
   years: (theme: Theme) => ({
     fontSize: '1rem',
     color: theme.palette.text.secondary
@@ -41,14 +37,22 @@ export const styles: Record<Key, SxProps<Theme>> = {
     color: theme.palette.text.secondary,
     fontSize: '1rem'
   }),
-  pillsContainer: (theme: Theme) => ({
+  pillsContainer: () => ({
     display: 'flex',
+    flexWrap: 'wrap',
     gap: '1rem',
-    flexWrap: 'wrap'
+    height: 0,
+    visibility: 'hidden',
+    opacity: 0,
+    transition: 'visibility 0s, opacity 0.75s linear',
+    '&.hovered': {
+      visibility: 'visible',
+      opacity: 1,
+      height: 'auto',
+    }
   }),
-  rightColumn: (theme: Theme) => ({
-    width: { xs: '100%', sm: '70%' },
-    padding: { xs: '2rem 1rem', md: '2rem 0' },
+  rightColumn: () => ({
+    paddingTop: '1.5rem',
     display: 'flex',
     flexDirection: 'column',
     gap: '1rem'

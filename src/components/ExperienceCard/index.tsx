@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 
 import { ExperienceCardProps } from "./types";
@@ -18,14 +18,23 @@ const ExperienceCard = ({
 }: ExperienceCardProps) => {
   const handleCardClick = () => url && window.open(url, '_blank');
 
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  const handleOnMouseEnter = () => setIsHovered(true);
+  const handleOnMouseLeave = () => setIsHovered(false);
+
   return (
-    <Box onClick={handleCardClick} className='experience-card' sx={url ? styles.cardContainerWithPointer : styles.cardContainer}>
-      <Box className='left-column' sx={styles.leftColumn}>
-        <Typography sx={styles.years} variant="body1">
-          {fromYear} - {toYear}
-        </Typography>
-      </Box>
-      <Box className='right-column' sx={styles.rightColumn}>
+    <Box
+      className='experience-card'
+      onClick={handleCardClick}
+      onMouseEnter={handleOnMouseEnter}
+      onMouseLeave={handleOnMouseLeave}
+      sx={url ? styles.cardContainerWithPointer : styles.cardContainer}
+    >
+      <Typography sx={styles.years} variant="body1">
+        {fromYear} - {toYear}
+      </Typography>
+      <Box sx={styles.rightColumn}>
         <Typography sx={styles.position} variant="body1">
           {position} <InlineTypography text={`@ ${employer}`} />
         </Typography>
@@ -34,7 +43,7 @@ const ExperienceCard = ({
             {paragraph}
           </Typography>
         ))}
-        <Box sx={styles.pillsContainer} className='pills-container'>
+        <Box sx={styles.pillsContainer} className={`${isHovered ? 'hovered' : ''}`}>
           {stack.map((tech, index) => (
             <Pill label={tech} key={index} />
           ))}
