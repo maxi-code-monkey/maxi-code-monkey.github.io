@@ -7,7 +7,7 @@ import { styles } from './styles';
 const Contact = () => (
   <Box sx={styles.sectionContainer} id="contact">
     <SectionTitle
-      number="03."
+      number="04."
       name="And now what"
     />
     <Typography sx={styles.message} variant="body1">

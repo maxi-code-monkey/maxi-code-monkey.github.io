@@ -3,8 +3,9 @@ import { Box } from "@mui/material";
 
 import About from "../../modules/About";
 import Contact from "../../modules/Contact";
-import WorkExperience from "../../modules/Experience";
 import MainInfo from "../../modules/MainInfo";
+import Referrals from "../../modules/Referrals";
+import WorkExperience from "../../modules/Experience";
 
 import { WithScrollToTop } from "../../hoc/withScrollToTop/withScrollToTop";
 
@@ -22,6 +23,7 @@ const TwoColumns = () => {
         <Box className={scrollToTopSelector}>
           <About />
         </Box>
+        <Referrals />
         <WithScrollToTop selector={`.${scrollToTopSelector}`}>
           <>
             <WorkExperience />

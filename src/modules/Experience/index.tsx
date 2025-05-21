@@ -12,7 +12,7 @@ const WorkExperience = () => {
 
   return (
     <Box sx={styles.sectionContainer} id="work-experience">
-      <SectionTitle number="02." name="Work Experience" />
+      <SectionTitle number="03." name="Work Experience" />
       <Box className='text-container' sx={styles.experienceContainer}>
         {WorkExperiences.map((experience: ExperienceCardProps, index: number) => (
           <ExperienceCard {...experience} />
