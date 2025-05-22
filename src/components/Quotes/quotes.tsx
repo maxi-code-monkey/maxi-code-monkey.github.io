@@ -1,6 +1,7 @@
 import { Quote } from "./types";
 import FerminImg from '../../assets/img/quotes-fermin-molinuevo.jpeg';
-// import MartinImg from '../../assets/img/quotes-martin-villalba.jpeg';
+import MartinImg from '../../assets/img/quotes-martin-villalba.jpeg';
+import PabloImg from '../../assets/img/quotes-pablo-bonillo.jpeg';
 
 const ReferenceQuotes: Array<Quote> = [
   {
@@ -13,24 +14,24 @@ const ReferenceQuotes: Array<Quote> = [
     linkedinProfileUrl: 'https://www.linkedin.com/in/ferm%C3%ADn-molinuevo-76023b67/',
     position: '~ SR Elixir Developer / Tech Lead',
   },
-  // {
-  //   name: 'Pablo Bonillo',
-  //   quote: [
-  //     'Some Random Quote'
-  //   ],
-  //   image: FerminImg,
-  //   linkedinProfileUrl: '',
-  //   position: 'SR Frontend Developer (React)',
-  // },
-  // {
-  //   name: 'Martin Villalba',
-  //   quote: [
-  //     'Aguante la birrrrraaa!!'
-  //   ],
-  //   image: MartinImg,
-  //   linkedinProfileUrl: '',
-  //   position: 'SR Backend Developer (Ruby)',
-  // },
+  {
+    name: 'Pablo Bonillo',
+    quote: [
+      '~ This referral has been requested and is being worked on ~'
+    ],
+    image: PabloImg,
+    linkedinProfileUrl: 'https://www.linkedin.com/in/pablo-andr%C3%A9s-bonillo-a07a05187/',
+    position: '~ SR Frontend Developer (React)',
+  },
+  {
+    name: 'Martin Villalba',
+    quote: [
+      '~ This referral has been requested and is being worked on ~'
+    ],
+    image: MartinImg,
+    linkedinProfileUrl: 'https://www.linkedin.com/in/14tinchov/',
+    position: 'SR Backend Developer (Ruby)',
+  },
 ];
 
 export { ReferenceQuotes };

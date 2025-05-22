@@ -16,7 +16,7 @@ const Quote = ({
     <Box sx={styles.quote}>
       <Box className='left-column'>
         <Box className='name-caontainer'>
-          <Link href={linkedinProfileUrl}>
+          <Link href={linkedinProfileUrl} target='_blank'>
             <Typography variant="h2" className="name">{name}</Typography>
             <LinkedInIcon />
           </Link>

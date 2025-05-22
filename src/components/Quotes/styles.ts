@@ -4,7 +4,7 @@ type Key = 'quotesListContainer' | 'quote' | 'selectedQuote' | 'buttonsContainer
 
 export const styles: Record<Key, SxProps<Theme>> = {
   quotesListContainer: () => ({
-    height: '650px',
+    height: '450px',
     display: 'flex',
     flexDirection: 'row',
     width: '100%',
