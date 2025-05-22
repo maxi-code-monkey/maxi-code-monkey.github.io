@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Box } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import CircleIcon from '@mui/icons-material/Circle';
 
 import { QuoteListProps } from "./types";
 import Quote from "./Quote";
@@ -23,6 +24,22 @@ const QuoteList = ({
     setSelectedIndex(newIndex);
   };
 
+  const renderBullets = () => {
+    if (quotes.length === 0) return null;
+
+    return (
+      <Box sx={styles.bulletsContainer}>
+        {quotes.map((q, index) => {
+          return (
+            <Box sx={styles.bullet} className={`${selectedIndex === index ? 'selected' : ''}`}>
+              <CircleIcon sx={{ height: 12 }} onClick={() => setSelectedIndex(index)} />
+            </Box>
+          );
+        })}
+      </Box>
+    )
+  }
+
   return (
     <Box id='quotes-list-container' sx={styles.quotesListContainer}>
       {quotes.map((quote, index) => {
@@ -35,7 +52,7 @@ const QuoteList = ({
           </Box>
         );
       })}
-      {quotes.length >1 && (<Box sx={styles.buttonsContainer}>
+      {quotes.length > 1 && (<Box sx={styles.buttonsContainer}>
         <Box onClick={selectPrevIndex}>
           <ArrowBackIcon />
         </Box>
@@ -43,6 +60,7 @@ const QuoteList = ({
           <ArrowForwardIcon />
         </Box>
       </Box>)}
+      {renderBullets()}
     </Box>
   );
 }

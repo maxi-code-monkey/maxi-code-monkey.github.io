@@ -1,10 +1,10 @@
 import { SxProps, Theme } from '@mui/material';
 
-type Key = 'quotesListContainer' | 'quote' | 'selectedQuote' | 'buttonsContainer' | 'avatar'; 
+type Key = 'quotesListContainer' | 'quote' | 'selectedQuote' | 'bulletsContainer' | 'bullet' | 'buttonsContainer' | 'avatar'; 
 
 export const styles: Record<Key, SxProps<Theme>> = {
   quotesListContainer: () => ({
-    height: '450px',
+    height: { xs: '600px', sm: '450px', md: '650px', lg: '600px', xl: '450px' },
     display: 'flex',
     flexDirection: 'row',
     width: '100%',
@@ -17,12 +17,12 @@ export const styles: Record<Key, SxProps<Theme>> = {
     justifyContent: 'center',
 
     '.left-column': {
-      padding: { xs: 0, md: '0 3rem' },
+      padding: { xs: 0, md: '3rem' },
       width: '60%',
       display: 'flex',
       flexDirection: 'column',
       gap: '1.5rem',
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
 
       ".name-caontainer": {
         display: 'flex',
@@ -51,7 +51,6 @@ export const styles: Record<Key, SxProps<Theme>> = {
     },
   }),
   selectedQuote: (theme) => ({
-    // minWidth: '100%',
     '&.invisible-quote': {
       visibility: 'hidden',
       opacity: 0,
@@ -85,8 +84,28 @@ export const styles: Record<Key, SxProps<Theme>> = {
       border: `1px solid ${theme.palette.text.secondary}`,
       borderRadius: '50%',
       padding: '0.25rem',
-      color: theme.palette.text.secondary
+      color: theme.palette.text.secondary,
+      cursor: 'pointer',
     },
+  }),
+  bulletsContainer: (theme: Theme) => ({
+    display: 'flex',
+    flexDirection: 'row',
+    position: 'absolute',
+    marginLeft: '40%',
+    justifyContent: 'center',
+    padding: '1rem',
+    bottom: '2rem',
+    color: theme.palette.text.secondary,
+    [theme.breakpoints.down('lg')]: {
+      display: 'none',
+    }
+  }),
+  bullet: (theme: Theme) => ({
+    cursor: 'pointer',
+    '&.selected': {
+      color: theme.palette.text.disabled
+    }
   }),
   avatar: () => ({
     height: '250px',

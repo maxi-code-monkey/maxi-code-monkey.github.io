@@ -14,7 +14,7 @@ const defaultCardStyling: SxProps<Theme> = (theme: Theme) => ({
   })}`,
   '&:hover': {
     border: `0.5px solid ${theme.palette.text.secondary}`,
-    transform: 'scale(1.2)',
+    transform: { xs: 'scale(1.2)', lg: 'scale(1.1)' },
   }
 });
 
