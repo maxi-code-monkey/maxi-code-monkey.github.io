@@ -17,7 +17,9 @@ const ReferenceQuotes: Array<Quote> = [
   {
     name: 'Pablo Bonillo',
     quote: [
-      '~ This referral has been requested and is being worked on ~'
+      "Working with Maxi is easy, and I think that's the best thing that you can expect from a colleague",
+      "He has both great technical and communication skills, he answers fast and delivers precise and efficient solutions and he also provides great feedback to other teammates ideas, he is both a great team player and a great teacher.",
+      "I actually learned many things working with him, he is definitely a great addition to any serious development team"
     ],
     image: PabloImg,
     linkedinProfileUrl: 'https://www.linkedin.com/in/pablo-andr%C3%A9s-bonillo-a07a05187/',
