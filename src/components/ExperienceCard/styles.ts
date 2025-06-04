@@ -3,7 +3,6 @@ import { SxProps, Theme } from '@mui/material';
 type Key = 'cardContainer' | 'years' | 'position' | 'descParagraph' | 'pillsContainer' | 'rightColumn' | 'cardContainerWithPointer';
 
 const defaultCardStyling: SxProps<Theme> = (theme: Theme) => ({
-  backgroundColor: theme.palette.background.default,
   borderRadius: '0.5rem',
   height: '100%',
   display: 'flex',
